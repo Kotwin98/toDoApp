@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
 
 class AddTask extends Component {
+    state = {
+        text: '',
+        checked: false
+    };
+
+    handleClick = () => {
+        const { text, checked } = this.state;
+        if (text.length > 2) {
+            const add = this.props.add(text, checked);
+            if (add) {
+                this.setState({
+                    text: '',
+                    checked: false
+                });
+            }
+        }
+    };
+
     render() {
         return (
             <div>
@@ -15,7 +33,7 @@ class AddTask extends Component {
                         id="important"
                     />
                 </label>
-                <button>Add</button>
+                <button onClick={this.handleClick}>Add</button>
             </div>
         );
     }
