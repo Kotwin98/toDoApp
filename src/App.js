@@ -44,6 +44,20 @@ class App extends Component {
     ]
   };
 
+  addTask = (text, important) => {
+    const task = {
+      id: this.counter,
+      text,
+      important,
+      active: true
+    };
+    this.counter++;
+    this.setState(prevState => ({
+      tasks: [...prevState.tasks, task]
+    }));
+    return true;
+  };
+
   render() {
     return (
       <div className="App">
