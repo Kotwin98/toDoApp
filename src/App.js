@@ -46,6 +46,26 @@ class App extends Component {
     ]
   };
 
+  deleteTask = id => {
+    let tasks = [...this.state.tasks];
+    tasks = tasks.filter(task => task.id !== id);
+    this.setState({
+      tasks
+    });
+  };
+
+  statusTask = id => {
+    const tasks = [...this.state.tasks];
+    tasks.forEach(task => {
+      if (task.id === id) {
+        task.active = false;
+      }
+    });
+    this.setState({
+      tasks
+    });
+  };
+
   addTask = (text, important) => {
     const task = {
       id: this.counter,
@@ -65,7 +85,10 @@ class App extends Component {
       <div className="App">
         <h1>Add task</h1>
         <AddTask add={this.addTask} />
-        <TaskList tasks={this.state.tasks} />
+        <TaskList 
+          tasks={this.state.tasks}
+          delete={this.deleteTask}
+          change={this.statusTask} />
       </div>
     );
   }
