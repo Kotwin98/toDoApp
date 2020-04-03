@@ -22,7 +22,19 @@ const TaskList = props => {
         />
     ));
     return (
-
+        <>
+            <div>
+                <h3>Tasks to do:</h3>
+                {activeTasks.length > 0 ? activeTasks : 'No added tasks'}
+            </div>
+            <div>
+                <h4>Done ({doneTasks.length})</h4>
+                {done.length > 5 && (
+                    <span>Your last 5 tasks:</span>
+                )}
+                {doneTasks.slice(0, 5)}
+            </div>
+        </>
     );
 };
 
