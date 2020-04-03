@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddTask from './components/AddTask/AddTask';
+import TaskList from './components/TaskList/TaskList';
 import './App.css';
 
 class App extends Component {
@@ -64,6 +65,7 @@ class App extends Component {
       <div className="App">
         <h1>Add task</h1>
         <AddTask add={this.addTask} />
+        <TaskList tasks={this.state.tasks} />
       </div>
     );
   }
