@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './AddTask.scss';
 
 class AddTask extends Component {
     state = {
@@ -33,21 +34,24 @@ class AddTask extends Component {
 
     render() {
         return (
-            <div>
+            <div className="form">
                 <input
+                    className="inputText"
                     type="text"
                     placeholder="write task"
                     value={this.state.text}
                     onChange={this.handleText}
                 />
-                <label htmlFor="important">
+                <label htmlFor="important" className="container">
                     Important
                     <input
+                        className="checkbox"
                         type="checkbox"
                         id="important"
                         checked={this.state.checked}
                         onChange={this.handleCheckbox}
                     />
+                    <span className="checkmark"></span>
                 </label>
                 <button onClick={this.handleClick}>Add</button>
             </div>

@@ -1,0 +1,53 @@
+.taskActive {
+    border-bottom: 1px solid #eeeeee;
+    .delete,
+    .done {
+      margin: 0 6px;
+      padding: 5px 10px;
+      background-color: #eeeeee;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      &:hover {
+        transform: scale(1.2);
+        background-color: #e2a69e;
+        color: #fff;
+      }
+    }
+  }
+  .doneTask {
+    margin-bottom: 20px;
+  }
+  .taskDone {
+    font-size: 15px;
+    .delete {
+      margin: 0 6px;
+      padding: 5px 10px;
+      background-color: #eeeeee;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      &:hover {
+        transform: scale(1.2);
+        background-color: #e2a69e;
+        color: #fff;
+      }
+    }
+    .taskComplete {
+      font-size: 12px;
+      display: block;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .taskActive {
+      font-size: 14px;
+    }
+    .taskActive .done:hover,
+    .taskActive .delete:hover,
+    .taskDone .delete:hover {
+      transform: none;
+      background-color: #eeeeee;
+      color: #2e2e2e;
+    }
+  }
