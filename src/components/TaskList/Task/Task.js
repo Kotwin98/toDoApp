@@ -2,7 +2,7 @@ import React from 'react';
 
 const Task = props => {
     const style = {
-        color: '#'
+        color: '#f41804'
     };
     const { text, id, active, important } = props.task;
     if (active) {

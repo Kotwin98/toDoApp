@@ -1,4 +1,5 @@
 import React from 'react';
+import Task from './Task/Task';
 
 const TaskList = props => {
     const active = props.tasks.filter(task => task.active);
