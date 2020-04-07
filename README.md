@@ -1,3 +1,11 @@
+# toDoApp
+### **See [DEMO](https://kotwin98.github.io/toDoApp/)**
+## Tech stack
+- HTML, SASS, RWD
+- JavaScript ES6
+- React
+- NPM / Yarn 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
